@@ -15,6 +15,6 @@ def main (request):
 def test (request):
     return  HttpResponse('Test',status=200)
 
-class RoomView(generics.ListAPIView):
+class RoomView(generics.CreateAPIView):
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
